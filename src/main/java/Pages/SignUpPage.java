@@ -2,10 +2,7 @@ package Pages;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
-import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.support.FindBy;
-
-import static java.sql.DriverManager.getDriver;
 
 public class SignUpPage extends PageBase {
     public SignUpPage(AppiumDriver driver) {
@@ -35,15 +32,15 @@ public class SignUpPage extends PageBase {
     MobileElement ExitCode;
     public void SignUp(AppiumDriver driver)
     {
-        ScrollDown(driver);
+        //ScrollDown(driver);
         ClickButton(SignUpBtn);
         FirstNameTxt.sendKeys("Nermeen");
         LastNameTxt.sendKeys("Mahmoud");
-        ScrollDown(driver);
+        //ScrollDown(driver);
         EmailTxt.sendKeys("Nermeen13@gmail.com");
         PasswordTxt.sendKeys("Yasmeen42014118");
         ConfirmPassTxt.sendKeys("Yasmeen42014118");
-        ScrollDown(driver);
+       // ScrollDown(driver);
         PhoneNumberTxt.sendKeys("01113153105");
         ClickButton(JoinNowBtn);
         VerificationTxt.sendKeys("");

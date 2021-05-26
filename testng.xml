@@ -1,10 +1,30 @@
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Regression Suite">
-    <test name="Regression Suite" preserve-order="false">
+<!--<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">-->
+<!--<suite name="Regression Suite"  >-->
+<!--    <test name="Regression Suite">-->
+<!--        <classes>-->
+<!--           <class name="Tests.LoginTests"/>-->
+<!--            <class name="Tests.AddPostTests"/>-->
+<!--            <class name="Tests.TeePeeTests"/>-->
+<!--            <class name="Tests.DareTest"/>-->
+<!--            <class name="Tests.LifeTests"/>-->
+<!--            <class name="Tests.LogoutTests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--</suite>-->
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="AndroidNativeSuite" verbose="1" parallel="tests" thread-count="1" >
+
+    <test name="Android native app test on Android 11">
+        <parameter name="udid" value="emulator-5554"/>
+        <parameter name="systemPort" value="8200"/>
+        <parameter name="platform" value="Android 11.0"/>
         <classes>
-           <class name="Tests.LoginTests"/>
-            <class name="Tests.AddPostTests"/>
-            <class name="Tests.LogoutTests"/>
+            <class name="Runner.TestRunner"/>
+<!--            <class name="Tests.LoginTests"/>-->
+<!--            <class name="Tests.DareTest"/>-->
+<!--            <class name="Tests.LifeTests"/>-->
+<!--            <class name="Tests.NewsfeedsTests"/>-->
+<!--            <class name="Tests.LogoutTests"/>-->
         </classes>
     </test>
 </suite>

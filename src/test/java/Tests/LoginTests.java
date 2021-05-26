@@ -6,9 +6,11 @@ import org.testng.annotations.Test;
 public class LoginTests extends TestBase {
     LoginPage loginObj;
 
-    @Test(priority = 1)
-    public void UserCanLogin() {
+    @Test(priority = 1,alwaysRun = true)
+    public void UserCanLogin() throws InterruptedException {
+
         loginObj=new LoginPage(driver);
+        //loginObj.swipeSplashScreen(driver);
         loginObj.SuccessfullyLogin(driver);
 
     }
